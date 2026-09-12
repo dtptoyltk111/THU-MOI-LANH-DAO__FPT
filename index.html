@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ưu đãi đặc quyền Tasco dành cho Ban Lãnh đạo FPT</title>
+<meta name="description" content="Thông tin chương trình trải nghiệm và ưu đãi đặc quyền Volvo, Lynk & Co 900 dành cho Ban Lãnh đạo Tập đoàn FPT.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23243D42'/%3E%3Cpath d='M18 20h28M32 20v27' stroke='%23D2B071' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+/* ============ 1. ROOT PALETTE (Design Language) ============ */
+:root{
+  --color-bg: #DCEEF2;         /* 60% Nền */
+  --color-secondary: #5DADE2;  /* 30% Phụ */
+  --color-1: #0000FF;          /* Big Number / header ngoài box */
+  --color-text: #1A1A1A;       /* chữ đen trong box */
+
+  --color-accent-gold-1: #F3D998;
+  --color-accent-gold-2: #D4AF37;
+  --color-accent-gold-3: #9C7A2A;
+  --luxury-border-width: 3.8px;
+  --luxury-glow: 0 0 4px rgba(212,175,55,0.55), 0 0 18px rgba(212,175,55,0.5), 0 0 36px rgba(212,175,55,0.3), 0 18px 36px rgba(20,40,60,0.16);
+
+  --radius: 20px;
+}
+
+html{scroll-behavior:smooth}
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:'Roboto', -apple-system, sans-serif;
+  color: var(--color-text);
+  background:
+    radial-gradient(ellipse 900px 500px at 50% 100%, rgba(130,210,220,0.55) 0%, transparent 70%),
+    linear-gradient(160deg, #bfe7ea 0%, #9fd6dc 45%, #7cc3cc 100%);
+  padding: 24px 14px 60px;
+}
+
+/* ============ 2. HIỆU ỨNG A — Glass Edge-Glow (bọc toàn bộ, 1 lần) ============ */
+.glass-panel{
+  position:relative;
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+  border-radius: var(--radius);
+  padding:3px;
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,0.95) 0%,
+      rgba(255,255,255,0.35) 30%,
+      rgba(255,255,255,0.15) 55%,
+      rgba(255,255,255,0.5) 100%);
+  box-shadow:
+    0 0 12px rgba(255,255,255,0.9),
+    0 0 34px rgba(255,255,255,0.65),
+    0 0 70px rgba(180,235,240,0.55),
+    0 0 130px rgba(150,220,230,0.35),
+    0 25px 60px rgba(20,60,70,0.20);
+  contain: layout paint style;
+  isolation: isolate;
+  transform: translateZ(0);
+}
+.glass-panel::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  box-shadow:
+    0 0 16px rgba(255,255,255,1), 0 0 44px rgba(255,255,255,0.8),
+    0 0 90px rgba(180,235,240,0.7), 0 0 160px rgba(150,220,230,0.45),
+    0 25px 60px rgba(20,60,70,0.20);
+  opacity:0;
+  will-change:opacity;
+  animation: glass-breathe-opacity 4.5s ease-in-out infinite;
+}
+@keyframes glass-breathe-opacity{
+  0%,100%{ opacity:0; }
+  50%{ opacity:1; }
+}
+.glass-panel-inner{
+  position:relative;
+  border-radius: calc(var(--radius) - 3px);
+  background: var(--color-bg);
+  padding: 36px 40px;
+  overflow:hidden;
+}
+.glass-panel-inner::before{
+  content:"";
+  position:absolute;
+  top:-60%; left:-20%;
+  width:55%; height:220%;
+  background: linear-gradient(100deg,
+    rgba(255,255,255,0) 0%, rgba(255,255,255,0.22) 45%,
+    rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.22) 55%, rgba(255,255,255,0) 100%);
+  transform: rotate(8deg);
+  pointer-events:none;
+}
+
+/* ============ 3. HIỆU ỨNG B — Luxury Gold-Silver Border (từng box con) ============ */
+.luxury-border{
+  position: relative;
+  background:
+    linear-gradient(100deg,
+      transparent 0%, transparent 38%,
+      rgba(255,255,255,0.85) 47%,
+      rgba(255,255,255,1) 50%,
+      rgba(255,255,255,0.85) 53%,
+      transparent 62%, transparent 100%),
+    radial-gradient(ellipse 190px 13px at 58% 2%,
+      rgba(255,255,255,0.95) 0%,
+      rgba(255,250,222,0.65) 42%,
+      rgba(255,255,255,0) 80%),
+    radial-gradient(circle 3px at 14% 95%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 75%),
+    radial-gradient(circle 2.4px at 91% 90%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 75%),
+    linear-gradient(135deg, var(--color-accent-gold-1) 0%, var(--color-accent-gold-2) 45%, var(--color-accent-gold-3) 100%);
+  background-size: 280% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-blend-mode: screen, screen, screen, screen, normal;
+  animation: luxury-glint-sweep 30s ease-in-out infinite;
+  padding: var(--luxury-border-width);
+  border-radius: var(--radius);
+  box-shadow: var(--luxury-glow);
+  contain: layout paint style;
+  isolation: isolate;
+  transform: translateZ(0);
+}
+.luxury-border::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: 0 0 7px rgba(255,220,140,0.85), 0 0 28px rgba(255,215,120,0.7), 0 0 50px rgba(212,175,55,0.45), 0 18px 36px rgba(20,40,60,0.16);
+  opacity: 0;
+  will-change: opacity;
+  animation: luxury-glow-pulse-opacity 3.2s ease-in-out infinite;
+}
+@keyframes luxury-glint-sweep{
+  0%, 100% { background-position: -140% 0, 0 0, 0 0, 0 0, 0 0; }
+  50%      { background-position: 240% 0, 0 0, 0 0, 0 0, 0 0; }
+}
+@keyframes luxury-glow-pulse-opacity{
+  0%, 100% { opacity: 0; }
+  50%      { opacity: 1; }
+}
+.luxury-border > .luxury-border-inner{
+  background: var(--color-bg);
+  border-radius: calc(var(--radius) - var(--luxury-border-width));
+  height: 100%;
+}
+.luxury-border > .luxury-border-inner > .card-content{
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: inherit;
+  height: 100%;
+}
+
+/* ============ 4. LAYOUT — nội dung & bố cục giữ nguyên như bản gốc ============ */
+.wrap{max-width:1020px;margin:auto}
+.section-gap{margin-top:22px}
+
+.hero .card-content{padding:45px 24px;text-align:center}
+.eyebrow{font:600 12px 'Roboto',sans-serif;letter-spacing:.2em;color:var(--color-accent-gold-3)}
+h1{font-size:clamp(28px,5vw,50px);line-height:1.1;margin:14px auto 8px;max-width:800px;color:var(--color-text);font-weight:900}
+h2{font-size:24px;margin:0 0 12px;color:var(--color-text);font-weight:700}
+h3{font-size:18px;margin:0 0 8px;color:var(--color-text);font-weight:700}
+.models{font-style:italic;margin:16px 0 0;color:var(--color-text)}
+
+/* ==== Model Tabs (thay cho .models) — Tab Header Border System, liên kết xuống bảng bên dưới ==== */
+.model-tabs-outer{
+  position: relative; margin: 18px auto 0; max-width:640px; border-radius: var(--radius); padding: 3px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.35) 30%, rgba(255,255,255,0.15) 55%, rgba(255,255,255,0.5) 100%);
+  box-shadow: 0 0 12px rgba(255,255,255,0.9), 0 0 34px rgba(255,255,255,0.65), 0 0 70px rgba(180,235,240,0.55), 0 0 130px rgba(150,220,230,0.35), 0 25px 60px rgba(20,60,70,0.20);
+  contain: layout paint style; isolation: isolate; transform: translateZ(0);
+}
+.model-tabs-outer::after{
+  content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  box-shadow: 0 0 16px rgba(255,255,255,1), 0 0 44px rgba(255,255,255,0.8), 0 0 90px rgba(180,235,240,0.7), 0 0 160px rgba(150,220,230,0.45), 0 25px 60px rgba(20,60,70,0.20);
+  opacity:0; will-change:opacity; animation: model-tabs-glass-breathe-opacity 4.5s ease-in-out infinite;
+}
+@keyframes model-tabs-glass-breathe-opacity{ 0%,100%{opacity:0;} 50%{opacity:1;} }
+.model-tabs-inner{ position:relative; background: var(--color-bg); border-radius: calc(var(--radius) - 3px); padding: 8px 10px; overflow:hidden; }
+.model-tabs-inner::before{
+  content:""; position:absolute; top:-60%; left:-20%; width:55%; height:220%;
+  background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.22) 45%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.22) 55%, rgba(255,255,255,0) 100%);
+  transform: rotate(8deg); pointer-events:none;
+}
+.model-tab-nav{ position:relative; display:flex; justify-content:center; flex-wrap:wrap; gap:8px; }
+.model-tab-btn{
+  position: relative; font-family:'Roboto', sans-serif; font-size:14px; font-weight:500;
+  color:#0b3d45; background:#eef9fa; padding:9px 16px; border:none; border-radius:9px; cursor:pointer;
+  white-space:nowrap; text-decoration:none; transition:all 0.2s ease; display:inline-block;
+  -webkit-appearance:none; appearance:none; outline:none; font-family:inherit;
+  box-shadow: 0 0 3px rgba(255,255,255,0.9), 0 0 8px rgba(180,235,240,0.6), 0 0 16px rgba(150,220,230,0.35);
+  contain: layout paint style; isolation: isolate; transform: translateZ(0);
+}
+.model-tab-btn::after{
+  content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  box-shadow: 0 0 5px rgba(255,255,255,1), 0 0 12px rgba(180,235,240,0.75), 0 0 24px rgba(150,220,230,0.45);
+  opacity:0; will-change:opacity; animation: model-tab-btn-breathe-opacity 4.5s ease-in-out infinite;
+}
+@keyframes model-tab-btn-breathe-opacity{ 0%,100%{opacity:0;} 50%{opacity:1;} }
+.model-tab-btn:hover{ color:var(--color-accent-gold-3); background:#e4f6f7; }
+.model-tab-btn.active{
+  color:#3a2a06;
+  background: linear-gradient(135deg, var(--color-accent-gold-1) 0%, var(--color-accent-gold-2) 55%, var(--color-accent-gold-3) 100%);
+  box-shadow: var(--luxury-glow);
+  font-weight:700;
+}
+tr[id]{ scroll-margin-top: 20px; }
+
+/* ==== Hero title/subtitle — hiệu ứng chữ vàng ánh kim (đồng bộ luxury-border) ==== */
+.hero-gold-text{
+  background: linear-gradient(100deg,
+    var(--color-accent-gold-3) 0%,
+    var(--color-accent-gold-2) 22%,
+    #fff8df 48%,
+    var(--color-accent-gold-1) 60%,
+    var(--color-accent-gold-3) 100%);
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation:
+    luxury-text-glint-sweep 30s ease-in-out infinite,
+    luxury-text-glow-pulse 3.2s ease-in-out infinite;
+}
+@keyframes luxury-text-glint-sweep{
+  0%, 100% { background-position: -60% 0, 0 0, 0 0, 0 0, 0 0; }
+  50%      { background-position: 160% 0, 0 0, 0 0, 0 0, 0 0; }
+}
+@keyframes luxury-text-glow-pulse{
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(212,175,55,0.28)) drop-shadow(0 0 14px rgba(212,175,55,0.16)); }
+  50%      { filter: drop-shadow(0 0 12px rgba(255,220,140,0.55)) drop-shadow(0 0 26px rgba(212,175,55,0.35)); }
+}
+/* Hero H1 — 1 dòng duy nhất + chữ nổi 3D + hiệu ứng ánh kim giống hệt H2 (hero-gold-text) + vệt sáng Specular Highlight */
+.hero-title-3d{
+  white-space: nowrap;
+  font-size: clamp(14px, 4.4vw, 50px);
+  text-shadow:
+    0 1px 0 #fff6c9,
+    0 2px 0 #f0d78c,
+    0 3px 0 #dfc069,
+    0 4px 0 #cfa94e,
+    0 5px 1px rgba(0,0,0,0.10),
+    0 0 5px rgba(0,0,0,0.10),
+    0 1px 3px rgba(0,0,0,0.30),
+    0 3px 5px rgba(0,0,0,0.20),
+    0 5px 10px rgba(0,0,0,0.25);
+  background:
+    linear-gradient(100deg,
+      transparent 0%, transparent 38%,
+      rgba(255,255,255,0.85) 47%,
+      rgba(255,255,255,1) 50%,
+      rgba(255,255,255,0.85) 53%,
+      transparent 62%, transparent 100%),
+    radial-gradient(ellipse 190px 13px at 58% 2%,
+      rgba(255,255,255,0.95) 0%,
+      rgba(255,250,222,0.65) 42%,
+      rgba(255,255,255,0) 80%),
+    radial-gradient(circle 3px at 14% 95%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 75%),
+    radial-gradient(circle 2.4px at 91% 90%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 75%),
+    linear-gradient(135deg, var(--color-accent-gold-3) 0%, var(--color-accent-gold-2) 45%, var(--color-accent-gold-1) 100%);
+  background-size: 260% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-blend-mode: screen, screen, screen, screen, normal;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation:
+    hero-title-glint-sweep 30s ease-in-out infinite,
+    hero-title-glow-pulse 3.2s ease-in-out infinite;
+}
+@keyframes hero-title-glint-sweep{
+  0%, 100% { background-position: -60% 0, 0 0, 0 0, 0 0, 0 0; }
+  50%      { background-position: 160% 0, 0 0, 0 0, 0 0, 0 0; }
+}
+@keyframes hero-title-glow-pulse{
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(212,175,55,0.28)) drop-shadow(0 0 14px rgba(212,175,55,0.16)); }
+  50%      { filter: drop-shadow(0 0 12px rgba(255,220,140,0.55)) drop-shadow(0 0 26px rgba(212,175,55,0.35)); }
+}
+
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.benefits .card-content{padding:22px}
+.num{color:var(--color-accent-gold-3);font:700 12px 'Roboto',sans-serif;letter-spacing:.15em}
+
+.table-wrap .card-content{padding:24px;overflow:auto}
+table{width:100%;border-collapse:collapse;font-family:'Roboto',sans-serif;font-size:14px;line-height:1.45}
+th{background:var(--color-1);color:#fff;text-align:left;padding:13px;font-weight:500}
+td{padding:13px;border-bottom:1px solid rgba(0,0,0,0.08);vertical-align:top;color:var(--color-text)}
+tr:nth-child(even) td{background:rgba(93,173,226,0.10)}
+.value{font-weight:700;white-space:nowrap;color:var(--color-1)}
+.note{font:13px/1.55 'Roboto',sans-serif;color:#3d5457;margin-top:16px}
+
+.cta{text-align:center;margin:28px 0}
+.cta a{
+  display:inline-block;text-decoration:none;padding:14px 26px;border-radius:8px;
+  font:700 13px 'Roboto',sans-serif;letter-spacing:.05em;color:#3a2a06;
+  background: linear-gradient(135deg, var(--color-accent-gold-1) 0%, var(--color-accent-gold-2) 55%, var(--color-accent-gold-3) 100%);
+  box-shadow: var(--luxury-glow);
+}
+.contact{text-align:center;font:14px/1.7 'Roboto',sans-serif;color:var(--color-text)}
+.contact a{color:var(--color-1)}
+.deadline{color:var(--color-accent-gold-3);font-weight:700}
+
+.cta button.cta-btn{
+  cursor:pointer;border:none;
+  display:inline-block;text-decoration:none;padding:14px 26px;border-radius:8px;
+  font:700 13px 'Roboto',sans-serif;letter-spacing:.05em;color:#3a2a06;
+  background: linear-gradient(135deg, var(--color-accent-gold-1) 0%, var(--color-accent-gold-2) 55%, var(--color-accent-gold-3) 100%);
+  box-shadow: var(--luxury-glow);
+}
+
+.modal-overlay{
+  display:none;position:fixed;inset:0;z-index:1000;
+  background:rgba(10,25,30,0.55);
+  align-items:center;justify-content:center;
+  padding:16px;
+}
+.modal-overlay.open{display:flex}
+.modal-box{
+  position:relative;width:100%;max-width:460px;max-height:90vh;overflow-y:auto;
+  background:#fbf9f3;border-radius:16px;
+  border:var(--luxury-border-width) solid var(--color-accent-gold-2);
+  box-shadow: var(--luxury-glow);
+  padding:26px 24px 24px;
+  font-family:'Roboto',sans-serif;
+}
+.modal-box h3{
+  margin:0 0 4px;font-size:19px;font-weight:900;color:var(--color-text);
+  text-align:center;
+}
+.modal-box p.modal-sub{
+  margin:0 0 18px;font-size:13px;color:#3d5457;text-align:center;
+}
+.modal-close{
+  position:absolute;top:10px;right:14px;background:none;border:none;
+  font-size:22px;line-height:1;color:#3d5457;cursor:pointer;
+}
+.modal-form label{
+  display:block;font:600 13px/1.4 'Roboto',sans-serif;color:var(--color-text);margin:12px 0 5px;
+}
+.modal-form input,.modal-form select,.modal-form textarea{
+  width:100%;padding:10px 12px;border-radius:8px;border:1px solid #c9d8da;
+  font:14px 'Roboto',sans-serif;color:var(--color-text);background:#fff;
+}
+.modal-form textarea{resize:vertical;min-height:70px}
+.modal-submit{
+  margin-top:18px;width:100%;cursor:pointer;border:none;padding:13px 20px;border-radius:8px;
+  font:700 13px 'Roboto',sans-serif;letter-spacing:.05em;color:#3a2a06;
+  background: linear-gradient(135deg, var(--color-accent-gold-1) 0%, var(--color-accent-gold-2) 55%, var(--color-accent-gold-3) 100%);
+  box-shadow: var(--luxury-glow);
+}
+.modal-note{margin-top:10px;font:12px/1.5 'Roboto',sans-serif;color:#3d5457;text-align:center}
+
+@media(max-width:760px){
+  .benefits{grid-template-columns:1fr}
+  .hero .card-content{padding:30px 16px}
+  .table-wrap .card-content{padding:12px}
+  table{min-width:850px}
+  .glass-panel-inner{padding:20px 14px}
+}
+</style>
+</head>
+<body>
+  <div class="glass-panel">
+    <div class="glass-panel-inner">
+      <main class="wrap">
+
+        <!-- HERO -->
+        <section class="luxury-border hero">
+          <div class="luxury-border-inner">
+            <div class="card-content">
+              <div class="eyebrow">TASCO · FPT</div>
+              <h1 class="hero-title-3d">CHƯƠNG TRÌNH ƯU ĐÃI ĐẶC QUYỀN</h1>
+              <h2 class="hero-gold-text">Dành riêng cho Ban Lãnh đạo Tập đoàn FPT</h2>
+              <nav class="model-tabs-outer">
+                <div class="model-tabs-inner">
+                  <div class="model-tab-nav">
+                    <button type="button" class="model-tab-btn" onclick="showModelTab('model-xc90', this)">Volvo XC90 T8 PHEV</button>
+                    <button type="button" class="model-tab-btn" onclick="showModelTab('model-xc90-b5', this)">Volvo XC90 B5</button>
+                    <button type="button" class="model-tab-btn" onclick="showModelTab('model-s90', this)">Volvo S90</button>
+                    <button type="button" class="model-tab-btn" onclick="showModelTab('model-xc60', this)">Volvo XC60 B5</button>
+                    <button type="button" class="model-tab-btn" onclick="showModelTab('model-lynk', this)">Lynk &amp; Co 900</button>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </section>
+
+        <!-- BENEFITS -->
+        <section class="benefits section-gap">
+          <article class="luxury-border">
+            <div class="luxury-border-inner">
+              <div class="card-content">
+                <div class="num">01 · TRẢI NGHIỆM</div>
+                <h3>Trước khi lựa chọn</h3>
+                <p>Sử dụng xe trong <b>07 ngày</b>. Mẫu xe và lịch trải nghiệm được thu xếp theo đăng ký.</p>
+              </div>
+            </div>
+          </article>
+          <article class="luxury-border">
+            <div class="luxury-border-inner">
+              <div class="card-content">
+                <div class="num">02 · ƯU ĐÃI</div>
+                <h3>Đặc quyền khi mua xe</h3>
+                <p>Ưu đãi bổ sung <b>2%–5% trên giá niêm yết</b>, áp dụng đồng thời với chính sách hiện hành của từng mẫu xe.</p>
+              </div>
+            </div>
+          </article>
+          <article class="luxury-border">
+            <div class="luxury-border-inner">
+              <div class="card-content">
+                <div class="num">03 · NGHỈ DƯỠNG</div>
+                <h3>Six Senses Ninh Vân Bay</h3>
+                <p>Nhận thư mời <b>02 đêm nghỉ dưỡng</b> khi mua xe theo chương trình.</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- TABLE -->
+        <section class="luxury-border table-wrap section-gap">
+          <div class="luxury-border-inner">
+            <div class="card-content">
+              <h2>Quyền lợi theo từng mẫu xe</h2>
+              <div style="overflow:auto">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Mẫu xe / Giá niêm yết</th>
+                      <th>Chính sách bán hàng hiện hành</th>
+                      <th>Ưu đãi đặc quyền FPT</th>
+                      <th>Tổng giá trị quyền lợi quy đổi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="model-xc90" class="model-row">
+                      <td><b>Volvo XC90 T8 PHEV</b><br>3,710 tỷ đồng</td>
+                      <td>Bảo dưỡng định kỳ 03 năm; phụ kiện chính hãng cao cấp; bảo hiểm vật chất 01 năm; bảo hiểm TNDS 01 năm; lựa chọn voucher Six Senses hoặc voucher DAFC.</td>
+                      <td>Thêm <b>5%</b> trên giá niêm yết; voucher 02 đêm Six Senses Ninh Vân Bay.</td>
+                      <td class="value">332,144 triệu đồng</td>
+                    </tr>
+                    <tr id="model-xc90-b5" class="model-row">
+                      <td><b>Volvo XC90 B5</b><br>3,289 tỷ đồng</td>
+                      <td>Bảo dưỡng định kỳ 03 năm; gói nâng cấp Polestar; bảo hiểm vật chất 01 năm; bảo hiểm TNDS 01 năm; chuyến đi Thụy Điển.</td>
+                      <td>Thêm <b>5%</b> trên giá niêm yết; voucher 02 đêm Six Senses Ninh Vân Bay.</td>
+                      <td class="value">408,566 triệu đồng</td>
+                    </tr>
+                    <tr id="model-s90" class="model-row">
+                      <td><b>Volvo S90</b><br>2,750 tỷ đồng</td>
+                      <td>Ưu đãi hiện hành lên đến 200 triệu đồng.</td>
+                      <td>Thêm <b>2%</b> trên giá niêm yết; voucher 02 đêm Six Senses Ninh Vân Bay.</td>
+                      <td class="value">280,400 triệu đồng</td>
+                    </tr>
+                    <tr id="model-xc60" class="model-row">
+                      <td><b>Volvo XC60 B5</b><br>2,299 tỷ đồng</td>
+                      <td>Ưu đãi hiện hành lên đến 400 triệu đồng.</td>
+                      <td>Thêm <b>2%</b> trên giá niêm yết; voucher 02 đêm Six Senses Ninh Vân Bay.</td>
+                      <td class="value">471,380 triệu đồng</td>
+                    </tr>
+                    <tr id="model-lynk" class="model-row">
+                      <td><b>Lynk &amp; Co 900</b><br>3,069 tỷ đồng</td>
+                      <td>Áp dụng chính sách bán hàng hiện hành tại thời điểm ký hợp đồng.</td>
+                      <td>Thêm <b>2%</b> trên giá niêm yết (= 61,38 triệu đồng); voucher 02 đêm Six Senses Ninh Vân Bay.</td>
+                      <td class="value">86,780 triệu đồng*</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="note"><b>Lưu ý:</b> Tổng giá trị quyền lợi được quy đổi trên cơ sở các ưu đãi tài chính, sản phẩm, dịch vụ và trải nghiệm đi kèm; không đồng nhất với mức giảm trực tiếp trên giá bán xe. Nội dung và hình thức áp dụng cụ thể tùy theo từng mẫu xe.</p>
+              <p class="note">* Giá trị Lynk &amp; Co 900 gồm ưu đãi FPT 2% và voucher Six Senses 25,4 triệu đồng; chưa bao gồm chính sách bán hàng hiện hành tại thời điểm ký hợp đồng.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="cta">
+          <button type="button" class="cta-btn" onclick="openRegisterModal()">ĐĂNG KÝ TRẢI NGHIỆM</button>
+        </div>
+        <p class="contact">
+          <span class="deadline">Chương trình áp dụng đến ngày 15/10/2026</span><br>
+          Đoàn Đắc Hiển · 0901 883 339 · <a href="mailto:hien.dd@tasco.com.vn">hien.dd@tasco.com.vn</a>
+        </p>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="registerModalOverlay">
+    <div class="modal-box">
+      <button type="button" class="modal-close" onclick="closeRegisterModal()" aria-label="Đóng">&times;</button>
+      <h3>ĐĂNG KÝ TRẢI NGHIỆM XE</h3>
+      <p class="modal-sub">Chương trình ưu đãi đặc quyền dành cho Ban Lãnh đạo Tập đoàn FPT</p>
+      <form class="modal-form" action="https://formsubmit.co/el/nuwozi" method="POST">
+        <input type="hidden" name="_subject" value="Đăng ký trải nghiệm xe - Chương trình FPT">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://dtptoyltk111.github.io/THU-MOI-LANH-DAO__FPT/">
+
+        <label for="reg-name">Họ và tên *</label>
+        <input type="text" id="reg-name" name="Họ và tên" required>
+
+        <label for="reg-phone">Số điện thoại *</label>
+        <input type="tel" id="reg-phone" name="Số điện thoại" required>
+
+        <label for="reg-model">Mẫu xe quan tâm</label>
+        <select id="reg-model" name="Mẫu xe quan tâm">
+          <option>Volvo XC90 T8 PHEV</option>
+          <option>Volvo XC90 B5</option>
+          <option>Volvo S90</option>
+          <option>Volvo XC60 B5</option>
+          <option>Lynk &amp; Co 900</option>
+        </select>
+
+        <label for="reg-note">Ghi chú</label>
+        <select id="reg-note" name="Ghi chú">
+          <option>HCM</option>
+          <option>Hà Nội</option>
+          <option>Đà Nẵng</option>
+        </select>
+
+        <button type="submit" class="modal-submit">GỬI ĐĂNG KÝ</button>
+      </form>
+      <p class="modal-note">Đoàn Đắc Hiển · 0901 883 339 · hien.dd@tasco.com.vn</p>
+    </div>
+  </div>
+
+<script>
+function openRegisterModal(){
+  document.getElementById('registerModalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeRegisterModal(){
+  document.getElementById('registerModalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){ closeRegisterModal(); }
+});
+document.getElementById('registerModalOverlay').addEventListener('click', function(e){
+  if(e.target === this){ closeRegisterModal(); }
+});
+
+function showModelTab(id, btn){
+  document.querySelectorAll('.model-row').forEach(function(row){
+    row.style.display = (row.id === id) ? '' : 'none';
+  });
+  document.querySelectorAll('.model-tab-btn').forEach(function(b){
+    b.classList.remove('active');
+  });
+  if(btn){ btn.classList.add('active'); }
+  var target = document.getElementById(id);
+  if(target){ target.scrollIntoView({behavior:'smooth', block:'center'}); }
+}
+</script>
+</body>
+</html>
