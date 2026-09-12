@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ưu đãi đặc quyền Tasco dành cho Ban Lãnh đạo FPT</title>
+<meta name="description" content="Thông tin chương trình trải nghiệm và ưu đãi đặc quyền Volvo, Lynk & Co 900 dành cho Ban Lãnh đạo Tập đoàn FPT.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23243D42'/%3E%3Cpath d='M18 20h28M32 20v27' stroke='%23D2B071' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+/* ============ 1. ROOT PALETTE (Design Language) ============ */
+:root{
+  --color-bg: #DCEEF2;         /* 60% Nền */
+  --color-secondary: #5DADE2;  /* 30% Phụ */
+  --color-1: #0000FF;          /* Big Number / header ngoài box */
+  --color-text: #1A1A1A;       /* chữ đen trong box */
+
+  --color-accent-gold-1: #F3D998;
+  --color-accent-gold-2: #D4AF37;
+  --color-accent-gold-3: #9C7A2A;
+  --luxury-border-width: 3.8px;
+  --luxury-glow: 0 0 4px rgba(212,175,55,0.55), 0 0 18px rgba(212,175,55,0.5), 0 0 36px rgba(212,175,55,0.3), 0 18px 36px rgba(20,40,60,0.16);
+
+  --radius: 20px;
+}
+
+html{scroll-behavior:smooth}
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Roboto', -apple-system, sans-serif;
+  color: var(--color-text);
+  background:
+    radial-gradient(ellipse 900px 500px at 50% 100%, rgba(130,210,220,0.55) 0%, transparent 70%),
+    linear-gradient(160deg, #bfe7ea 0%, #9fd6dc 45%, #7cc3cc 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  padding: 24px 14px 60px;
+}
+
+/* ============ 2. HIỆU ỨNG A — Glass Edge-Glow (bọc toàn bộ, 1 lần) ============ */
+.glass-panel{
+  position:relative;
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+  border-radius: var(--radius);
+  padding:3px;
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,0.95) 0%,
+      rgba(255,255,255,0.35) 30%,
+      rgba(255,255,255,0.15) 55%,
+      rgba(255,255,255,0.5) 100%);
+  box-shadow:
+    0 0 12px rgba(255,255,255,0.9),
+    0 0 34px rgba(255,255,255,0.65),
+    0 0 70px rgba(180,235,240,0.55),
+    0 0 130px rgba(150,220,230,0.35),
+    0 25px 60px rgba(20,60,70,0.20);
+  contain: layout paint style;
+  isolation: isolate;
+  transform: translateZ(0);
+}
+.glass-panel::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  box-shadow:
+    0 0 16px rgba(255,255,255,1), 0 0 44px rgba(255,255,255,0.8),
+    0 0 90px rgba(180,235,240,0.7), 0 0 160px rgba(150,220,230,0.45),
+    0 25px 60px rgba(20,60,70,0.20);
+  opacity:0;
+  will-change:opacity;
+  animation: glass-breathe-opacity 4.5s ease-in-out infinite;
+}
+@keyframes glass-breathe-opacity{
+  0%,100%{ opacity:0; }
+  50%{ opacity:1; }
+}
+.glass-panel-inner{
+  position:relative;
+  border-radius: calc(var(--radius) - 3px);
+  background: var(--color-bg);
+  padding: 40px 36px;
+  overflow:hidden;
+}
+.glass-panel-inner::before{
+  content:"";
+  position:absolute;
+  top:-60%; left:-20%;
+  width:55%; height:220%;
+  background: linear-gradient(100deg,
+    rgba(255,255,255,0) 0%, rgba(255,255,255,0.22) 45%,
+    rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.22) 55%, rgba(255,255,255,0) 100%);
+  transform: rotate(8deg);
+  pointer-events:none;
+}
+
+/* ============ 3. HIỆU ỨNG B — Luxury Gold-Silver Border (từng box con) ============ */
+.luxury-border{
+  position: relative;
+  background:
+    linear-gradient(100deg,
+      transparent 0%, transparent 38%,
+      rgba(255,255,255,0.85) 47%,
+      rgba(255,255,255,1) 50%,
+      rgba(255,255,255,0.85) 53%,
+      transparent 62%, transparent 100%),
+    radial-gradient(ellipse 190px 13px at 58% 2%,
+      rgba(255,255,255,0.95) 0%,
+      rgba(255,250,222,0.65) 42%,
+      rgba(255,255,255,0) 80%),
+    radial-gradient(circle 3px at 14% 95%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 75%),
+    radial-gradient(circle 2.4px at 91% 90%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 75%),
+    linear-gradient(135deg, var(--color-accent-gold-1) 0%, var(--color-accent-gold-2) 45%, var(--color-accent-gold-3) 100%);
+  background-size: 280% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-blend-mode: screen, screen, screen, screen, normal;
+  animation: luxury-glint-sweep 30s ease-in-out infinite;
+  padding: var(--luxury-border-width);
+  border-radius: var(--radius);
+  box-shadow: var(--luxury-glow);
+  contain: layout paint style;
+  isolation: isolate;
+  transform: translateZ(0);
+}
+.luxury-border::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: 0 0 7px rgba(255,220,140,0.85), 0 0 28px rgba(255,215,120,0.7), 0 0 50px rgba(212,175,55,0.45), 0 18px 36px rgba(20,40,60,0.16);
+  opacity: 0;
+  will-change: opacity;
+  animation: luxury-glow-pulse-opacity 3.2s ease-in-out infinite;
+}
+@keyframes luxury-glint-sweep{
+  0%, 100% { background-position: -140% 0, 0 0, 0 0, 0 0, 0 0; }
+  50%      { background-position: 240% 0, 0 0, 0 0, 0 0, 0 0; }
+}
+@keyframes luxury-glow-pulse-opacity{
+  0%, 100% { opacity: 0; }
+  50%      { opacity: 1; }
+}
+.luxury-border > .luxury-border-inner{
+  background: var(--color-bg);
+  border-radius: calc(var(--radius) - var(--luxury-border-width));
+  height: 100%;
+}
+.luxury-border > .luxury-border-inner > .card-content{
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: inherit;
+  height: 100%;
+}
+.card-content{ padding: 28px 24px; }
+
+/* ============ 4. LAYOUT — nội dung & bố cục giữ nguyên như bản gốc ============ */
+.wrap{max-width:1020px;margin:auto}
+.section-gap{margin-top:22px}
+
+.hero .card-content{padding:45px 24px;text-align:center}
+.eyebrow{display:flex;align-items:center;justify-content:center;gap:20px}
+.eyebrow img{display:block;height:42px;width:auto;object-fit:contain}
+.eyebrow img:first-child{height:26px}
+h1{font-size:clamp(28px,5vw,50px);line-height:1.1;margin:14px auto 8px;max-width:800px;color:var(--color-text);font-weight:900}
+h2{font-size:24px;margin:0 0 12px;color:var(--color-text);font-weight:700}
+h3{font-size:18px;margin:0 0 8px;color:var(--color-text);font-weight:700}
+.models{font-style:italic;margin:16px 0 0;color:var(--color-text)}
+
+/* ==== Model Tabs (thay cho .models) — Tab Header Border System, liên kết xuống bảng bên dưới ==== */
+.model-tabs-outer{
+  position: relative; margin: 18px auto 0; max-width:640px; border-radius: var(--radius); padding: 3px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.35) 30%, rgba(255,255,255,0.15) 55%, rgba(255,255,255,0.5) 100%);
+  box-shadow: 0 0 12px rgba(255,255,255,0.9), 0 0 34px rgba(255,255,255,0.65), 0 0 70px rgba(180,235,240,0.55), 0 0 130px rgba(150,220,230,0.35), 0 25px 60px rgba(20,60,70,0.20);
+  contain: layout paint style; isolation: isolate; transform: translateZ(0);
+}
+.model-tabs-outer::after{
+  content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  box-shadow: 0 0 16px rgba(255,255,255,1), 0 0 44px rgba(255,255,255,0.8), 0 0 90px rgba(180,235,240,0.7), 0 0 160px rgba(150,220,230,0.45), 0 25px 60px rgba(20,60,70,0.20);
+  opacity:0; will-change:opacity; animation: model-tabs-glass-breathe-opacity 4.5s ease-in-out infinite;
+}
+@keyframes model-tabs-glass-breathe-opacity{ 0%,100%{opacity:0;} 50%{opacity:1;} }
+.model-tabs-inner{ position:relative; background: var(--color-bg); border-radius: calc(var(--radius) - 3px); padding: 8px 10px; overflow:hidden; }
+.model-tabs-inner::before{
+  content:""; position:absolute; top:-60%; left:-20%; width:55%; height:220%;
+  background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.22) 45%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.22) 55%, rgba(255,255,255,0) 100%);
+  transform: rotate(8deg); pointer-events:none;
+}
+.model-tab-nav{ position:relative; display:flex; justify-content:center; flex-wrap:wrap; gap:8px; }
+.model-tab-btn{
+  position: relative; font-family:'Roboto', sans-serif; font-size:14px; font-weight:500;
+  color:#0b3d45; background:#eef9fa; padding:9px 16px; border:none; border-radius:9px; cursor:pointer;
+  white-space:nowrap; text-decoration:none; transition:all 0.2s ease; display:inline-block;
+  -webkit-appearance:none; appearance:none; outline:none; font-family:inherit;
+  box-shadow: 0 0 3px rgba(255,255,255,0.9), 0 0 8px rgba(180,235,240,0.6), 0 0 16px rgba(150,220,230,0.35);
+  contain: layout paint style; isolation: isolate; transform: translateZ(0);
+}
+.model-tab-btn::after{
+  content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  box-shadow: 0 0 5px rgba(255,255,255,1), 0 0 12px rgba(180,235,240,0.75), 0 0 24px rgba(150,220,230,0.45);
+  opacity:0; will-change:opacity; animation: model-tab-btn-breathe-opacity 4.5s ease-in-out infinite;
+}
+@keyframes model-tab-btn-breathe-opacity{ 0%,100%{opacity:0;} 50%{opacity:1;} }
+.model-tab-btn:hover{ color:var(--color-accent-gold-3); background:#e4f6f7; }
+.model-tab-btn.active{
+  position: relative;
+  padding: var(--luxury-border-width);
+  background:
+    linear-gradient(100deg, transparent 0%, transparent 38%, rgba(255,255,255,0.85) 47%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.85) 53%, transparent 62%, transparent 100%),
+    radial-gradient(ellipse 120px 10px at 58% 4%, rgba(255,255,255,0.95) 0%, rgba(255,250,222,0.65) 42%, rgba(255,255,255,0) 80%),
+    radial-gradient(circle 2.4px at 14% 92%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 75%),
+    radial-gradient(circle 2px at 91% 88%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 75%),
+    linear-gradient(135deg, var(--color-accent-gold-1) 0%, var(--color-accent-gold-2) 45%, var(--color-accent-gold-3) 100%);
+  background-size: 280% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-blend-mode: screen, screen, screen, screen, normal;
+  animation: model-tab-btn-luxury-glint-sweep 30s ease-in-out infinite;
+  box-shadow: var(--luxury-glow);
+  contain: layout paint style;
+  isolation: isolate;
+  transform: translateZ(0);
+  font-weight:700;
+}
+.model-tab-btn.active::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  box-shadow: 0 0 7px rgba(255,220,140,0.85), 0 0 28px rgba(255,215,120,0.7), 0 0 50px rgba(212,175,55,0.45), 0 18px 36px rgba(20,40,60,0.16);
+  opacity:0;
+  will-change:opacity;
+  animation: model-tab-btn-luxury-glow-pulse-opacity 3.2s ease-in-out infinite;
+}
+@keyframes model-tab-btn-luxury-glint-sweep{ 0%,100%{ background-position: -140% 0,0 0,0 0,0 0,0 0; } 50%{ background-position: 240% 0,0 0,0 0,0 0,0 0; } }
+@keyframes model-tab-btn-luxury-glow-pulse-opacity{ 0%,100%{opacity:0;} 50%{opacity:1;} }
+.model-tab-btn.active .model-tab-btn-label{
+  display:block;
+  background:#fdf9ef;
+  color:#083a44;
+  font-weight:700;
+  font-size:14px;
+  padding:8px 16px;
+  border-radius: calc(9px - var(--luxury-border-width));
+  white-space:nowrap;
+}
+tr[id]{ scroll-margin-top: 20px; }
+
+/* ==== Hero title/subtitle — hiệu ứng chữ vàng ánh kim (đồng bộ luxury-border) ==== */
+.hero-gold-text{
+  background: linear-gradient(100deg,
+    var(--color-accent-gold-3) 0%,
+    var(--color-accent-gold-2) 22%,
+    #fff8df 48%,
+    var(--color-accent-gold-1) 60%,
+    var(--color-accent-gold-3) 100%);
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation:
+    luxury-text-glint-sweep 30s ease-in-out infinite,
+    luxury-text-glow-pulse 3.2s ease-in-out infinite;
+}
+@keyframes luxury-text-glint-sweep{
+  0%, 100% { background-position: -60% 0, 0 0, 0 0, 0 0, 0 0; }
+  50%      { background-position: 160% 0, 0 0, 0 0, 0 0, 0 0; }
+}
+@keyframes luxury-text-glow-pulse{
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(212,175,55,0.28)) drop-shadow(0 0 14px rgba(212,175,55,0.16)); }
+  50%      { filter: drop-shadow(0 0 12px rgba(255,220,140,0.55)) drop-shadow(0 0 26px rgba(212,175,55,0.35)); }
+}
+/* Hero H1 — 1 dòng duy nhất + chữ nổi 3D + hiệu ứng ánh kim giống hệt H2 (hero-gold-text) + vệt sáng Specular Highlight */
+.hero-title-3d{
+  white-space: nowrap;
+  font-size: clamp(14px, 4.4vw, 50px);
+  text-shadow:
+    0 1px 0 #fff6c9,
+    0 2px 0 #f0d78c,
+    0 3px 0 #dfc069,
+    0 4px 0 #cfa94e,
+    0 5px 1px rgba(0,0,0,0.10),
+    0 0 5px rgba(0,0,0,0.10),
+    0 1px 3px rgba(0,0,0,0.30),
+    0 3px 5px rgba(0,0,0,0.20),
+    0 5px 10px rgba(0,0,0,0.25);
+  background:
+    linear-gradient(100deg,
+      transparent 0%, transparent 38%,
+      rgba(255,255,255,0.85) 47%,
+      rgba(255,255,255,1) 50%,
+      rgba(255,255,255,0.85) 53%,
+      transparent 62%, transparent 100%),
+    radial-gradient(ellipse 190px 13px at 58% 2%,
+      rgba(255,255,255,0.95) 0%,
+      rgba(255,250,222,0.65) 42%,
+      rgba(255,255,255,0) 80%),
+    radial-gradient(circle 3px at 14% 95%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 75%),
+    radial-gradient(circle 2.4px at 91% 90%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 75%),
+    linear-gradient(135deg, var(--color-accent-gold-3) 0%, var(--color-accent-gold-2) 45%, var(--color-accent-gold-1) 100%);
+  background-size: 260% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-blend-mode: screen, screen, screen, screen, normal;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation:
+    hero-title-glint-sweep 30s ease-in-out infinite,
+    hero-title-glow-pulse 3.2s ease-in-out infinite;
+}
+@keyframes hero-title-glint-sweep{
+  0%, 100% { background-position: -60% 0, 0 0, 0 0, 0 0, 0 0; }
+  50%      { background-position: 160% 0, 0 0, 0 0, 0 0, 0 0; }
+}
+@keyframes hero-title-glow-pulse{
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(212,175,55,0.28)) drop-shadow(0 0 14px rgba(212,175,55,0.16)); }
+  50%      { filter: drop-shadow(0 0 12px rgba(255,220,140,0.55)) drop-shadow(0 0 26px rgba(212,175,55,0.35)); }
+}
+
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.benefits .card-content{padding:22px}
+.num{color:var(--color-accent-gold-3);font:700 12px 'Roboto',sans-serif;letter-spacing:.15em}
+.benefit-title{color:var(--color-accent-gold-3);white-space:nowrap}
+.benefit-title-long{white-space:normal}
+
+.table-wrap .card-content{padding:24px;overflow:auto}
+.model-row{display:none}
+.model-row.active{display:block}
+.model-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+.model-detail-item{padding:16px;border-radius:8px;background:rgba(93,173,226,0.10);border:1px solid rgba(0,0,0,0.08)}
+.model-detail-item h3{margin:0 0 8px;font-size:13px;color:var(--color-1)}
+.model-detail-item p{margin:0;font:14px/1.55 'Roboto',sans-serif;color:var(--color-text)}
+table{width:100%;border-collapse:collapse;font-family:'Roboto',sans-serif;font-size:14px;line-height:1.45}
+th{background:var(--color-1);color:#fff;text-align:left;padding:13px;font-weight:500}
+td{padding:13px;border-bottom:1px solid rgba(0,0,0,0.08);vertical-align:top;color:var(--color-text)}
+tr:nth-child(even) td{background:rgba(93,173,226,0.10)}
+.value{font-weight:700;white-space:nowrap;color:var(--color-1)}
+.note{font:13px/1.55 'Roboto',sans-serif;color:#3d5457;margin-top:16px}
+
+.gold-divider{
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent 0%, #D4AF37 30%, #FFF5C0 50%, #D4AF37 70%, transparent 100%);
+  margin: 28px 0;
+}
+
+.cta{text-align:center;margin:28px 0}
+.cta a{
+  display:inline-block;text-decoration:none;padding:14px 26px;border-radius:8px;
+  font:700 13px 'Roboto',sans-serif;letter-spacing:.05em;color:#3a2a06;
+  background: linear-gradient(135deg, var(--color-accent-gold-1) 0%, var(--color-accent-gold-2) 55%, var(--color-accent-gold-3) 100%);
+  box-shadow: var(--luxury-glow);
+}
+.contact{text-align:center;font:14px/1.7 'Roboto',sans-serif;color:var(--color-text)}
+.contact a{color:var(--color-1)}
+.deadline{color:var(--color-accent-gold-3);font-weight:700}
+
+.cta button.cta-btn{
+  cursor:pointer;border:none;
+  display:inline-block;text-decoration:none;padding:14px 26px;border-radius:8px;
+  font:700 13px 'Roboto',sans-serif;letter-spacing:.05em;color:#3a2a06;
+  background: linear-gradient(135deg, var(--color-accent-gold-1) 0%, var(--color-accent-gold-2) 55%, var(--color-accent-gold-3) 100%);
+  box-shadow: var(--luxury-glow);
+}
+
+.modal-overlay{
+  display:none;position:fixed;inset:0;z-index:1000;
+  background:rgba(10,25,30,0.55);
+  align-items:center;justify-content:center;
+  padding:16px;
+}
+.modal-overlay.open{display:flex}
+.modal-box{
+  position:relative;width:100%;max-width:460px;max-height:90vh;overflow-y:auto;
+  background:#fbf9f3;border-radius:16px;
+  border:var(--luxury-border-width) solid var(--color-accent-gold-2);
+  box-shadow: var(--luxury-glow);
+  padding:26px 24px 24px;
+  font-family:'Roboto',sans-serif;
+}
+.modal-box h3{
+  margin:0 0 4px;font-size:19px;font-weight:900;color:var(--color-text);
+  text-align:center;
+}
+.modal-box p.modal-sub{
+  margin:0 0 18px;font-size:13px;color:#3d5457;text-align:center;
+}
+.modal-close{
+  position:absolute;top:10px;right:14px;background:none;border:none;
+  font-size:22px;line-height:1;color:#3d5457;cursor:pointer;
+}
+.modal-form label{
+  display:block;font:600 13px/1.4 'Roboto',sans-serif;color:var(--color-text);margin:12px 0 5px;
+}
+.modal-form input,.modal-form select,.modal-form textarea{
+  width:100%;padding:10px 12px;border-radius:8px;border:1px solid #c9d8da;
+  font:14px 'Roboto',sans-serif;color:var(--color-text);background:#fff;
+}
+.modal-form textarea{resize:vertical;min-height:70px}
+.modal-submit{
+  margin-top:18px;width:100%;cursor:pointer;border:none;padding:13px 20px;border-radius:8px;
+  font:700 13px 'Roboto',sans-serif;letter-spacing:.05em;color:#3a2a06;
+  background: linear-gradient(135deg, var(--color-accent-gold-1) 0%, var(--color-accent-gold-2) 55%, var(--color-accent-gold-3) 100%);
+  box-shadow: var(--luxury-glow);
+}
+.modal-note{margin-top:10px;font:12px/1.5 'Roboto',sans-serif;color:#3d5457;text-align:center}
+.form-status{min-height:20px;margin:12px 0 0;text-align:center;font:600 13px/1.45 'Roboto',sans-serif}
+.form-status.success{color:#166534}
+.form-status.error{color:#b42318}
+
+@media(max-width:760px){
+  .benefits{grid-template-columns:1fr}
+  .hero .card-content{padding:30px 16px}
+  .table-wrap .card-content{padding:12px}
+  .model-detail-grid{grid-template-columns:1fr}
+  table{min-width:850px}
+  .glass-panel-inner{padding:20px 14px}
+}
+
+/* ============ 5. TỐI ƯU KHI IN ============ */
+@media print {
+  body { background: none !important; padding: 0 !important; color: #000 !important; display:block !important; }
+  .glass-panel { box-shadow: none !important; border: 1px solid #ccc !important; max-width: 100% !important; }
+  .no-print, .model-tabs-outer { display: none !important; }
+  .luxury-border {
+    box-shadow: none !important;
+    background: #fff !important;
+    border: 2px solid #D4AF37 !important;
+    margin-bottom: 20px !important;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="glass-panel">
+    <div class="glass-panel-inner">
+      <main class="wrap">
+
+        <!-- HERO -->
+        <section class="luxury-border hero">
+          <div class="luxury-border-inner">
+            <div class="card-content">
+              <div class="eyebrow">
+                <img src="data:image/png;base64,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" alt="Tasco">
+                <img src="data:image/jpeg;base64,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" alt="FPT">
+              </div>
+              <h1 class="hero-title-3d">CHƯƠNG TRÌNH ƯU ĐÃI ĐẶC QUYỀN</h1>
+              <nav class="model-tabs-outer">
+                <div class="model-tabs-inner">
+                  <div class="model-tab-nav">
+                    <button type="button" class="model-tab-btn active" onclick="showModelTab('model-xc90', this)"><span class="model-tab-btn-label">Volvo XC90 T8 PHEV</span></button>
+                    <button type="button" class="model-tab-btn" onclick="showModelTab('model-xc90-b5', this)"><span class="model-tab-btn-label">Volvo XC90 B5</span></button>
+                    <button type="button" class="model-tab-btn" onclick="showModelTab('model-s90', this)"><span class="model-tab-btn-label">Volvo S90</span></button>
+                    <button type="button" class="model-tab-btn" onclick="showModelTab('model-xc60', this)"><span class="model-tab-btn-label">Volvo XC60 B5</span></button>
+                    <button type="button" class="model-tab-btn" onclick="showModelTab('model-lynk', this)"><span class="model-tab-btn-label">Lynk &amp; Co 900</span></button>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </section>
+
+        <div class="gold-divider"></div>
+
+        <!-- BENEFITS -->
+        <section class="benefits section-gap">
+          <article class="luxury-border">
+            <div class="luxury-border-inner">
+              <div class="card-content">
+                <h3 class="benefit-title">01. Trải nghiệm trước khi lựa chọn</h3>
+                <p>Sử dụng xe trong 07 ngày để cảm nhận sự phù hợp trong sinh hoạt và đi lại cùng gia đình. Mẫu xe và lịch trải nghiệm được thu xếp theo đăng ký.</p>
+              </div>
+            </div>
+          </article>
+          <article class="luxury-border">
+            <div class="luxury-border-inner">
+              <div class="card-content">
+                <h3 class="benefit-title">02. Ưu đãi đặc quyền thêm 2%-5%</h3>
+                <p>Mức ưu đãi bổ sung được tính trên giá niêm yết, tùy phiên bản, và áp dụng đồng thời với chính sách bán hàng hiện hành của hãng.</p>
+              </div>
+            </div>
+          </article>
+          <article class="luxury-border">
+            <div class="luxury-border-inner">
+              <div class="card-content">
+                <h3 class="benefit-title benefit-title-long">03. Trải nghiệm khu nghỉ dưỡng cao cấp</h3>
+                <p>Nhận thư mời 02 đêm nghỉ dưỡng tại Six Senses Ninh Vân Bay khi mua xe theo chương trình.</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <div class="gold-divider"></div>
+
+        <!-- TABLE -->
+        <section class="luxury-border table-wrap section-gap">
+          <div class="luxury-border-inner">
+            <div class="card-content">
+              <h2 id="modelDetailsHeading">Volvo XC90 T8 PHEV</h2>
+              <article id="model-xc90" class="model-row active">
+                <div class="model-detail-grid">
+                  <div class="model-detail-item"><h3>Mẫu xe / Giá niêm yết</h3><p><b class="value" data-model-name>Volvo XC90 T8 PHEV</b><br><b class="value">3,710 tỷ đồng</b></p></div>
+                  <div class="model-detail-item"><h3>Chính sách bán hàng hiện hành</h3><p>Bảo dưỡng định kỳ 03 năm; phụ kiện chính hãng cao cấp; bảo hiểm vật chất 01 năm; bảo hiểm TNDS 01 năm; lựa chọn voucher Six Senses hoặc voucher DAFC.</p></div>
+                  <div class="model-detail-item"><h3>Ưu đãi đặc quyền FPT</h3><p>Thêm <b>5%</b> trên giá niêm yết; voucher 02 đêm Six Senses Ninh Vân Bay.</p></div>
+                  <div class="model-detail-item"><h3>Tổng giá trị quyền lợi quy đổi</h3><p class="value">332,144 triệu đồng</p></div>
+                </div>
+              </article>
+              <article id="model-xc90-b5" class="model-row">
+                <div class="model-detail-grid">
+                  <div class="model-detail-item"><h3>Mẫu xe / Giá niêm yết</h3><p><b class="value" data-model-name>Volvo XC90 B5</b><br><b class="value">3,289 tỷ đồng</b></p></div>
+                  <div class="model-detail-item"><h3>Chính sách bán hàng hiện hành</h3><p>Bảo dưỡng định kỳ 03 năm; gói nâng cấp Polestar; bảo hiểm vật chất 01 năm; bảo hiểm TNDS 01 năm; chuyến đi Thụy Điển.</p></div>
+                  <div class="model-detail-item"><h3>Ưu đãi đặc quyền FPT</h3><p>Thêm <b>5%</b> trên giá niêm yết; voucher 02 đêm Six Senses Ninh Vân Bay.</p></div>
+                  <div class="model-detail-item"><h3>Tổng giá trị quyền lợi quy đổi</h3><p class="value">408,566 triệu đồng</p></div>
+                </div>
+              </article>
+              <article id="model-s90" class="model-row">
+                <div class="model-detail-grid">
+                  <div class="model-detail-item"><h3>Mẫu xe / Giá niêm yết</h3><p><b class="value" data-model-name>Volvo S90</b><br><b class="value">2,750 tỷ đồng</b></p></div>
+                  <div class="model-detail-item"><h3>Chính sách bán hàng hiện hành</h3><p>Ưu đãi hiện hành lên đến 200 triệu đồng.</p></div>
+                  <div class="model-detail-item"><h3>Ưu đãi đặc quyền FPT</h3><p>Thêm <b>2%</b> trên giá niêm yết; voucher 02 đêm Six Senses Ninh Vân Bay.</p></div>
+                  <div class="model-detail-item"><h3>Tổng giá trị quyền lợi quy đổi</h3><p class="value">280,400 triệu đồng</p></div>
+                </div>
+              </article>
+              <article id="model-xc60" class="model-row">
+                <div class="model-detail-grid">
+                  <div class="model-detail-item"><h3>Mẫu xe / Giá niêm yết</h3><p><b class="value" data-model-name>Volvo XC60 B5</b><br><b class="value">2,299 tỷ đồng</b></p></div>
+                  <div class="model-detail-item"><h3>Chính sách bán hàng hiện hành</h3><p>Ưu đãi hiện hành lên đến 400 triệu đồng.</p></div>
+                  <div class="model-detail-item"><h3>Ưu đãi đặc quyền FPT</h3><p>Thêm <b>2%</b> trên giá niêm yết; voucher 02 đêm Six Senses Ninh Vân Bay.</p></div>
+                  <div class="model-detail-item"><h3>Tổng giá trị quyền lợi quy đổi</h3><p class="value">471,380 triệu đồng</p></div>
+                </div>
+              </article>
+              <article id="model-lynk" class="model-row">
+                <div class="model-detail-grid">
+                  <div class="model-detail-item"><h3>Mẫu xe / Giá niêm yết</h3><p><b class="value" data-model-name>Lynk &amp; Co 900</b><br><b class="value">3,069 tỷ đồng</b></p></div>
+                  <div class="model-detail-item"><h3>Chính sách bán hàng hiện hành</h3><p>Áp dụng chính sách bán hàng hiện hành tại thời điểm ký hợp đồng.</p></div>
+                  <div class="model-detail-item"><h3>Ưu đãi đặc quyền FPT</h3><p>Thêm <b>2%</b> trên giá niêm yết (= 61,38 triệu đồng); voucher 02 đêm Six Senses Ninh Vân Bay.</p></div>
+                  <div class="model-detail-item"><h3>Tổng giá trị quyền lợi quy đổi</h3><p class="value">86,780 triệu đồng*</p></div>
+                </div>
+                <p class="note">* Giá trị Lynk &amp; Co 900 gồm ưu đãi FPT 2% và voucher Six Senses 25,4 triệu đồng; chưa bao gồm chính sách bán hàng hiện hành tại thời điểm ký hợp đồng.</p>
+              </article>
+              <p class="note"><b>Lưu ý:</b> Tổng giá trị quyền lợi được quy đổi trên cơ sở các ưu đãi tài chính, sản phẩm, dịch vụ và trải nghiệm đi kèm; không đồng nhất với mức giảm trực tiếp trên giá bán xe. Nội dung và hình thức áp dụng cụ thể tùy theo từng mẫu xe.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="cta">
+          <button type="button" class="cta-btn" onclick="openRegisterModal()">ĐĂNG KÝ TRẢI NGHIỆM</button>
+        </div>
+        <p class="contact">
+          <span class="deadline">Chương trình áp dụng đến ngày 15/10/2026</span><br>
+          Đoàn Đắc Hiển · 0901 883 339 · <a href="mailto:hien.dd@tasco.com.vn">hien.dd@tasco.com.vn</a>
+        </p>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="registerModalOverlay">
+    <div class="modal-box">
+      <button type="button" class="modal-close" onclick="closeRegisterModal()" aria-label="Đóng">&times;</button>
+      <h3>ĐĂNG KÝ TRẢI NGHIỆM XE</h3>
+      <p class="modal-sub">Chương trình ưu đãi đặc quyền dành cho Ban Lãnh đạo Tập đoàn FPT</p>
+      <form class="modal-form" id="registerForm" action="https://formsubmit.co/ajax/dachiendoan@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Đăng ký trải nghiệm xe - Chương trình FPT">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://dtptoyltk111.github.io/THU-MOI-LANH-DAO__FPT/">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+
+        <label for="reg-name">Họ và tên *</label>
+        <input type="text" id="reg-name" name="Họ và tên" required>
+
+        <label for="reg-phone">Số điện thoại *</label>
+        <input type="tel" id="reg-phone" name="Số điện thoại" required>
+
+        <label for="reg-model">Mẫu xe quan tâm</label>
+        <select id="reg-model" name="Mẫu xe quan tâm">
+          <option>Volvo XC90 T8 PHEV</option>
+          <option>Volvo XC90 B5</option>
+          <option>Volvo S90</option>
+          <option>Volvo XC60 B5</option>
+          <option>Lynk &amp; Co 900</option>
+        </select>
+
+        <label for="reg-note">Ghi chú</label>
+        <select id="reg-note" name="Ghi chú">
+          <option>HCM</option>
+          <option>Hà Nội</option>
+          <option>Đà Nẵng</option>
+        </select>
+
+        <button type="submit" class="modal-submit">GỬI ĐĂNG KÝ</button>
+      </form>
+      <p class="form-status" id="registerFormStatus" role="status" aria-live="polite"></p>
+      <p class="modal-note">Đoàn Đắc Hiển · 0901 883 339 · hien.dd@tasco.com.vn</p>
+    </div>
+  </div>
+
+<script>
+function openRegisterModal(){
+  document.getElementById('registerModalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeRegisterModal(){
+  document.getElementById('registerModalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){ closeRegisterModal(); }
+});
+// FormSubmit's AJAX endpoint returns JSON, allowing us to show a real success
+// or failure message instead of redirecting the visitor away without feedback.
+document.getElementById('registerForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+
+  var form = e.currentTarget;
+  var submitButton = form.querySelector('.modal-submit');
+  var status = document.getElementById('registerFormStatus');
+  status.textContent = '';
+  status.className = 'form-status';
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
+  submitButton.disabled = true;
+  submitButton.textContent = 'ĐANG GỬI...';
+
+  try {
+    var response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    });
+
+    if (!response.ok) {
+      throw new Error('FormSubmit returned ' + response.status);
+    }
+
+    status.textContent = 'Đăng ký đã được gửi thành công. Chúng tôi sẽ liên hệ với anh/chị sớm nhất.';
+    status.classList.add('success');
+    form.reset();
+  } catch (error) {
+    console.error('Registration submission failed:', error);
+    status.textContent = 'Chưa thể gửi đăng ký. Vui lòng thử lại hoặc liên hệ 0901 883 339.';
+    status.classList.add('error');
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'GỬI ĐĂNG KÝ';
+  }
+});
+
+function showModelTab(id, btn){
+  document.querySelectorAll('.model-row').forEach(function(row){
+    row.classList.toggle('active', row.id === id);
+  });
+  document.querySelectorAll('.model-tab-btn').forEach(function(b){
+    b.classList.remove('active');
+  });
+  if(btn){ btn.classList.add('active'); }
+  var target = document.getElementById(id);
+  if(target){
+    var modelName = target.querySelector('[data-model-name]');
+    if(modelName){ document.getElementById('modelDetailsHeading').textContent = modelName.textContent; }
+  }
+}
+</script>
+</body>
+</html>
